@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-    title = 'Tour of Heroes';
+
+    constructor() {
+        // Update the value for the progress-bar on an interval.
+        setInterval(() => {
+            this.progress = (this.progress + Math.floor(Math.random() * 4) + 1) % 100;
+        }, 200);
+    }
+
 }

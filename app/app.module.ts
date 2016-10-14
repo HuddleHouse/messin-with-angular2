@@ -4,13 +4,13 @@ import { FormsModule }    from '@angular/forms';
 import { MaterialModule } from '@angular/material';
 
 import { AppComponent }         from './app.component';
-import { DashboardComponent }   from './dashboard.component';
-import { HeroDetailComponent }  from './hero-detail.component';
-import { HeroesComponent }      from './heroes.component';
-import { HeroService }          from './hero.service';
+import { DashboardComponent }   from './components/dashboard/dashboard.component';
+import { HeroDetailComponent }  from './components/hero-detail/hero-detail.component';
+import { HeroesComponent }      from './components/heroes/heroes.component';
+import { HeroService }          from './services/hero.service';
 
 //Routes imported here
-import { AppRoutingModule }     from './app-routing.module';
+import { AppRoutingModule }     from './routing.module';
 
 @NgModule({
     imports: [

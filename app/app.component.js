@@ -11,7 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'Tour of Heroes';
+        var _this = this;
+        // Update the value for the progress-bar on an interval.
+        setInterval(function () {
+            _this.progress = (_this.progress + Math.floor(Math.random() * 4) + 1) % 100;
+        }, 200);
     }
     AppComponent = __decorate([
         core_1.Component({
