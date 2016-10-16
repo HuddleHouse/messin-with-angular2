@@ -2,15 +2,17 @@ import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { MaterialModule } from '@angular/material';
+import { AUTH_PROVIDERS }      from 'angular2-jwt';
 
 import { AppComponent }         from './app.component';
-import { DashboardComponent }   from './dashboard.component';
-import { HeroDetailComponent }  from './hero-detail.component';
-import { HeroesComponent }      from './heroes.component';
-import { HeroService }          from './hero.service';
+import { DashboardComponent }   from './components/dashboard/dashboard.component';
+import { HeroDetailComponent }  from './components/hero-detail/hero-detail.component';
+import { HeroesComponent }      from './components/heroes/heroes.component';
+import { LoginComponent }      from './components/login/login.component';
+import { HeroService }          from './services/hero.service';
 
 //Routes imported here
-import { AppRoutingModule }     from './app-routing.module';
+import { AppRoutingModule }     from './routing.module';
 
 @NgModule({
     imports: [
@@ -23,10 +25,16 @@ import { AppRoutingModule }     from './app-routing.module';
         AppComponent,
         DashboardComponent,
         HeroDetailComponent,
-        HeroesComponent
+        HeroesComponent,
+        LoginComponent
     ],
-    providers: [ HeroService ],
-    bootstrap: [ AppComponent ]
+    providers: [
+        HeroService,
+        AUTH_PROVIDERS
+    ],
+    bootstrap: [
+        AppComponent
+    ]
 })
 
 export class AppModule { }

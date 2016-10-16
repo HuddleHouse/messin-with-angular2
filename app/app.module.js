@@ -12,13 +12,15 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var material_1 = require('@angular/material');
+var angular2_jwt_1 = require('angular2-jwt');
 var app_component_1 = require('./app.component');
-var dashboard_component_1 = require('./dashboard.component');
-var hero_detail_component_1 = require('./hero-detail.component');
-var heroes_component_1 = require('./heroes.component');
-var hero_service_1 = require('./hero.service');
+var dashboard_component_1 = require('./components/dashboard/dashboard.component');
+var hero_detail_component_1 = require('./components/hero-detail/hero-detail.component');
+var heroes_component_1 = require('./components/heroes/heroes.component');
+var login_component_1 = require('./components/login/login.component');
+var hero_service_1 = require('./services/hero.service');
 //Routes imported here
-var app_routing_module_1 = require('./app-routing.module');
+var routing_module_1 = require('./routing.module');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -27,17 +29,23 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
-                app_routing_module_1.AppRoutingModule,
+                routing_module_1.AppRoutingModule,
                 material_1.MaterialModule.forRoot()
             ],
             declarations: [
                 app_component_1.AppComponent,
                 dashboard_component_1.DashboardComponent,
                 hero_detail_component_1.HeroDetailComponent,
-                heroes_component_1.HeroesComponent
+                heroes_component_1.HeroesComponent,
+                login_component_1.LoginComponent
             ],
-            providers: [hero_service_1.HeroService],
-            bootstrap: [app_component_1.AppComponent]
+            providers: [
+                hero_service_1.HeroService,
+                angular2_jwt_1.AUTH_PROVIDERS
+            ],
+            bootstrap: [
+                app_component_1.AppComponent
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
