@@ -2,7 +2,7 @@ import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { MaterialModule } from '@angular/material';
-import { AUTH_PROVIDERS }      from 'angular2-jwt';
+import { AUTH_PROVIDERS } from 'angular2-jwt';
 
 import { AppComponent }         from './app.component';
 import { DashboardComponent }   from './components/dashboard/dashboard.component';
