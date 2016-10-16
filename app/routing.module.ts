@@ -7,7 +7,7 @@ import { HeroDetailComponent }  from './components/hero-detail/hero-detail.compo
 
 const routes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
-    { path: 'dashboard',  component: DashboardComponent },
+    { path: 'home',  component: DashboardComponent },
     { path: 'login',  component: LoginComponent },
     { path: 'detail/:id', component: HeroDetailComponent },
     { path: 'heroes',     component: HeroesComponent }

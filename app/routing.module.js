@@ -16,7 +16,7 @@ var login_component_1 = require('./components/login/login.component');
 var hero_detail_component_1 = require('./components/hero-detail/hero-detail.component');
 var routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
-    { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
+    { path: 'home', component: dashboard_component_1.DashboardComponent },
     { path: 'login', component: login_component_1.LoginComponent },
     { path: 'detail/:id', component: hero_detail_component_1.HeroDetailComponent },
     { path: 'heroes', component: heroes_component_1.HeroesComponent }

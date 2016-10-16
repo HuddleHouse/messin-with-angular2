@@ -1,15 +1,27 @@
 <md-card class="app-input-section login">
     <form>
-        <table style="width: 100%" cellspacing="0">
+        <div class="login-logo">
+            <img width="250" src="/app/assets/img/logo.jpg">
+        </div>
+        <table style="width: 100%; margin-top: -35px;" cellspacing="0">
             <td>
-                <md-input placeholder="Username" #username style="width: 100%"></md-input>
+                <md-input placeholder="Email" #email style="width: 100%"></md-input>
             </td>
         </table>
-        <table style="width: 100%" cellspacing="0">
+        <table style="width: 100%; padding-bottom: 10px;" cellspacing="0">
             <td>
                 <md-input placeholder="Password" type="password" #password style="width: 100%"></md-input>
             </td>
         </table>
+        <button type="submit" md-raised-button color="primary" style="width: 100%; margin-bottom: 10px;" (click)="auth.login(email.value, password.value)">Login</button>
+        <button type="submit" md-raised-button color="default" style="width: 100%;" (click)="auth.signUp(email.value, password.value)">Sign Up</button>
+
+        <br><hr>
+        <div class="google-login">
+            <a (click)="auth.googleLogin()">
+                <img src="/app/assets/img/btn_google_signin_dark_normal_web@2x.png" width="260" heigt="38">
+            </a>
+        </div>
     </form>
 </md-card>
 
