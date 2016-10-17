@@ -1,5 +1,5 @@
 <section *ngIf="auth.authenticated()">
-    <div class="app-content">
+    <div class="app-content" style="height: 88vh;">
         <md-card flex >
             <md-card-subtitle>
                 Blankslate
@@ -13,3 +13,5 @@
         </md-card>
     </div>
 </section>
+
+<h4 *ngIf="!auth.authenticated()">You are not logged in, please click 'Log in' button to login</h4>

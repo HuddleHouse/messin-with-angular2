@@ -8,8 +8,10 @@ import { AppComponent }         from './app.component';
 import { DashboardComponent }   from './components/dashboard/dashboard.component';
 import { HeroDetailComponent }  from './components/hero-detail/hero-detail.component';
 import { HeroesComponent }      from './components/heroes/heroes.component';
-import { LoginComponent }      from './components/login/login.component';
-import { NavComponent }          from './components/nav/nav.component';
+import { LoginComponent }       from './components/login/login.component';
+import { NavComponent }         from './components/nav/nav.component';
+import { ProfileComponent }     from './components/profile/profile.component';
+import { FooterComponent }     from './components/footer/footer.component';
 
 import { HeroService }          from './services/hero.service';
 
@@ -29,7 +31,9 @@ import { AppRoutingModule }     from './routing.module';
         HeroDetailComponent,
         HeroesComponent,
         LoginComponent,
-        NavComponent
+        NavComponent,
+        ProfileComponent,
+        FooterComponent
     ],
     providers: [
         HeroService,

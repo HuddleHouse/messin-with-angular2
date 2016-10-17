@@ -4,12 +4,12 @@ import { Auth }      from '../../services/auth.service';
 
 @Component({
     moduleId: module.id,
-    selector: 'nav-bar',
-    templateUrl: 'nav.component.html',
-    styleUrls: [ 'nav.component.css' ]
+    selector: 'footer',
+    templateUrl: 'footer.component.html',
+    styleUrls: [ 'footer.component.css' ]
 })
 
-export class NavComponent {
+export class FooterComponent {
     constructor(
         private auth: Auth,
         private router: Router,

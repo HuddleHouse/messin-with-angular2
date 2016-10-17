@@ -22,3 +22,6 @@ body, input[text], button {
 * {
     font-family: 'Josefin Slab', serif !important;
 }
+.app-content {
+    padding: 20px;
+}

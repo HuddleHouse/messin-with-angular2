@@ -25,6 +25,16 @@ export class Auth {
 
         if (result && result.idToken) {
             localStorage.setItem('id_token', result.idToken);
+            this.auth0.getProfile(result.idToken, (error, profile) => {
+                if (error) {
+                    // Handle error
+                    alert(error);
+                    return;
+                }
+
+                localStorage.setItem('profile', JSON.stringify(profile));
+                this.userProfile = profile;
+            });
             this.router.navigate(['/home']);
         } else if (result && result.error) {
             alert('error: ' + result.error);
@@ -70,6 +80,8 @@ export class Auth {
     public logout() {
         // Remove token from localStorage
         localStorage.removeItem('id_token');
+        localStorage.removeItem('profile');
+        this.userProfile = undefined;
         this.router.navigate(['/login']);
     };
 }

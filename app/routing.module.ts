@@ -4,13 +4,15 @@ import { DashboardComponent }   from './components/dashboard/dashboard.component
 import { HeroesComponent }      from './components/heroes/heroes.component';
 import { LoginComponent }      from './components/login/login.component';
 import { HeroDetailComponent }  from './components/hero-detail/hero-detail.component';
+import {ProfileComponent} from "./components/profile/profile.component";
 
 const routes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
-    { path: 'home',  component: DashboardComponent },
-    { path: 'login',  component: LoginComponent },
+    { path: 'home', component: DashboardComponent },
+    { path: 'login', component: LoginComponent },
     { path: 'detail/:id', component: HeroDetailComponent },
-    { path: 'heroes',     component: HeroesComponent }
+    { path: 'heroes', component: HeroesComponent },
+    { path: 'profile', component: ProfileComponent },
 ];
 
 @NgModule({
