@@ -18,6 +18,7 @@ var dashboard_component_1 = require('./components/dashboard/dashboard.component'
 var hero_detail_component_1 = require('./components/hero-detail/hero-detail.component');
 var heroes_component_1 = require('./components/heroes/heroes.component');
 var login_component_1 = require('./components/login/login.component');
+var nav_component_1 = require('./components/nav/nav.component');
 var hero_service_1 = require('./services/hero.service');
 //Routes imported here
 var routing_module_1 = require('./routing.module');
@@ -37,7 +38,8 @@ var AppModule = (function () {
                 dashboard_component_1.DashboardComponent,
                 hero_detail_component_1.HeroDetailComponent,
                 heroes_component_1.HeroesComponent,
-                login_component_1.LoginComponent
+                login_component_1.LoginComponent,
+                nav_component_1.NavComponent
             ],
             providers: [
                 hero_service_1.HeroService,

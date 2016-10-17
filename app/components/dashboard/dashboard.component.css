@@ -58,3 +58,6 @@ h4 {
         min-width: 60px;
     }
 }
+.app-content {
+    padding: 20px;
+}

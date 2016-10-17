@@ -16,7 +16,11 @@ export class Auth {
         callbackURL: myConfig.callbackURL,
     });
 
+    userProfile: Object;
+
     constructor(private router: Router) {
+        // Set userProfile attribute of already saved profile
+        this.userProfile = JSON.parse(localStorage.getItem('profile'));
         var result = this.auth0.parseHash(window.location.hash);
 
         if (result && result.idToken) {
@@ -34,7 +38,7 @@ export class Auth {
             email: username,
             password: password,
         }, function(err) {
-            if (err) alert("something went wrong: " + err.message);
+            if (err) alert("Opps: " + err.message);
         });
     };
 
@@ -45,7 +49,7 @@ export class Auth {
             email: username,
             password: password,
         }, function(err) {
-            if (err) alert("something went wrong: " + err.message);
+            if (err) alert("Opps: " + err.message);
         });
     };
 
@@ -53,7 +57,7 @@ export class Auth {
         this.auth0.login({
             connection: 'google-oauth2'
         }, function(err) {
-            if (err) alert("something went wrong: " + err.message);
+            if (err) alert("Opps: " + err.message);
         });
     };
 
@@ -66,5 +70,6 @@ export class Auth {
     public logout() {
         // Remove token from localStorage
         localStorage.removeItem('id_token');
+        this.router.navigate(['/login']);
     };
 }

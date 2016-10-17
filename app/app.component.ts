@@ -10,5 +10,7 @@ import { Auth }              from './services/auth.service';
 })
 
 export class AppComponent {
-    title = 'Tour of Heroes';
+    constructor(
+        private auth: Auth
+    ) { }
 }

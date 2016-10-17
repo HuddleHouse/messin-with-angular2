@@ -3,4 +3,5 @@
     <!--<a routerLink="/dashboard" md-raised-button routerLinkActive="active">Dashboard</a>-->
     <!--<a routerLink="/heroes" md-raised-button routerLinkActive="active">Heroes</a>-->
 <!--</nav>-->
+<nav-bar *ngIf="auth.authenticated()"></nav-bar>
 <router-outlet></router-outlet>

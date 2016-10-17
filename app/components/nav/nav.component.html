@@ -1,0 +1,10 @@
+<md-toolbar color="primary">
+    <a routerLink="/home" class="logo">
+        <span>Blankslate</span>
+    </a>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
+    <button md-button (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button>
+</md-toolbar>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Auth }      from '../../services/auth.service';
 
 import { Hero } from '../../entity/hero';
 import { HeroService } from '../../services/hero.service';
@@ -12,11 +13,10 @@ import { HeroService } from '../../services/hero.service';
 })
 
 export class NavComponent implements OnInit {
-
-
     heroes: Hero[] = [];
 
     constructor(
+        private auth: Auth,
         private router: Router,
         private heroService: HeroService
     ) { }

@@ -1,8 +1,15 @@
-<h3>Top Heroes</h3>
-<div class="grid grid-pad">
-    <div *ngFor="let hero of heroes" (click)="gotoDetail(hero)" class="col-1-4">
-        <div class="module hero">
-            <h4>{{hero.name}}</h4>
-        </div>
+<section *ngIf="auth.authenticated()">
+    <div class="app-content">
+        <md-card flex >
+            <md-card-subtitle>
+                Blankslate
+            </md-card-subtitle>
+
+            <md-card-title>Welcome</md-card-title>
+
+            <md-card-content flex>
+
+            </md-card-content>
+        </md-card>
     </div>
-</div>
+</section>
